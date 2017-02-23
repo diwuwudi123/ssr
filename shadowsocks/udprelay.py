@@ -1387,7 +1387,6 @@ class UDPRelay(object):
                 retry = data_buf[1] + 1
                 del self._data_to_write_to_server_socket[0]
                 data, addr = data_buf[0]
-                print(addr)
                 self._server_socket.sendto(data, addr)
         except (OSError, IOError) as e:
             error_no = eventloop.errno_from_exception(e)

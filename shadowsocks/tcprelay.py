@@ -1085,7 +1085,6 @@ class TCPRelay(object):
             listen_port = config['server_port']
         self._listen_port = listen_port
         
-        print(listen_addr)
         if common.to_bytes(config['protocol']) in [b"auth_aes128_md5", b"auth_aes128_sha1"]:
             self._update_users(None, None)
 

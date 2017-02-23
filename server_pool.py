@@ -280,20 +280,15 @@ class ServerPool(object):
 			ret[port] = self.get_server_transfer(port)
 		for port in self.tcp_servers_pool:
 			u, d, l = self.get_server_mu_transfer(self.tcp_servers_pool[port])
-                        print(l)
 			self.update_mu_transfer(ret, u, d)
 		for port in self.tcp_ipv6_servers_pool:
 			u, d,l = self.get_server_mu_transfer(self.tcp_ipv6_servers_pool[port])
-                        print(l)
-                        print(d)
 			self.update_mu_transfer(ret, u, d)
 		for port in self.udp_servers_pool:
 			u, d = self.get_server_mu_transfer(self.udp_servers_pool[port])
-                        print(u)
 			self.update_mu_transfer(ret, u, d)
 		for port in self.udp_ipv6_servers_pool:
 			u, d = self.get_server_mu_transfer(self.udp_ipv6_servers_pool[port])
-                        print(u)
 			self.update_mu_transfer(ret, u, d)
 		return ret
 
